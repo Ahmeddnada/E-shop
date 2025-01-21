@@ -1,31 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // التحقق من المستخدم المسجل دخوله
+  const user = JSON.parse(localStorage.getItem("rememberedUser"));
+
+  // إذا لم يكن المستخدم مسجل دخوله أو ليس أدمن، يتم تحويله إلى الصفحة الرئيسية
+  if (!user || user.role !== "admin") {
+    window.location.href = "index.html";
+    return;
+  }
+
+  // إذا كان المستخدم أدمن، يتم تحميل صفحة الأدمن
+  loadAdminPage();
+});
+
+function loadAdminPage() {
   const addProductBtn = document.getElementById("addProductBtn");
   const modal = document.getElementById("addProductModal");
   const closeBtn = document.querySelector(".close");
   const addProductForm = document.getElementById("addProductForm");
   const productList = document.getElementById("productList");
 
+  // فتح النافذة المنبثقة لإضافة منتج
   addProductBtn.addEventListener("click", function () {
     modal.style.display = "block";
   });
 
+  // إغلاق النافذة المنبثقة
   closeBtn.addEventListener("click", function () {
     modal.style.display = "none";
   });
 
+  // إغلاق النافذة المنبثقة عند النقر خارجها
   window.addEventListener("click", function (e) {
     if (e.target === modal) {
       modal.style.display = "none";
     }
   });
 
+  // إضافة منتج جديد
   addProductForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const productName = document.getElementById("productName").value;
     const productPrice = document.getElementById("productPrice").value;
-    const productDescription =
-      document.getElementById("productDescription").value;
+    const productDescription = document.getElementById("productDescription").value;
     const productCategory = document.getElementById("productCategory").value;
     const productImageInput = document.getElementById("productImage");
 
@@ -59,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     reader.readAsDataURL(productImageFile);
   });
 
+  // عرض المنتجات
   function displayProducts() {
     productList.innerHTML = "";
     const products = JSON.parse(localStorage.getItem("products")) || [];
@@ -81,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // حذف المنتج
   window.deleteProduct = function (index) {
     let products = JSON.parse(localStorage.getItem("products")) || [];
     products.splice(index, 1);
@@ -88,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     displayProducts();
   };
 
+  // تعديل المنتج
   window.editProduct = function (index) {
     const products = JSON.parse(localStorage.getItem("products")) || [];
     const product = products[index];
@@ -131,5 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   };
 
+  // عرض المنتجات عند تحميل الصفحة
   displayProducts();
-});
+}
