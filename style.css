@@ -338,7 +338,7 @@ footer {
 
 @media (max-width: 1024px) {
   .container {
-    background: url(back1.jpg) no-repeat;
+    background: url(back.jpg) no-repeat;
     background-size: cover;
   }
 }
