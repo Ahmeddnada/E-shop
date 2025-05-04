@@ -69,7 +69,7 @@ nav .fa-solid {
   right: -3px;
 }
 .container {
-  background: url(/e-commerce/back.jpg) no-repeat;
+  background: url(back.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
