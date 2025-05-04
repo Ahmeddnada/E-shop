@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="logo"> <i class="fa-solid fa-bag-shopping"></i>E-shop </a>
+        <ul>
+          <li>
+            <a href="login.html">
+              <i class="fa-solid fa-right-to-bracket"></i>Login
+            </a>
+          </li>
+          <li>
+            <a class="cat"> <i class="fa-solid fa-user-plus"></i>Register </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="contain">
+      <div class="container">
+        <h2><i class="fa-regular fa-user"></i>register</h2>
+        <form id="signupForm">
+          <label class="sig" for="firstName">First Name</label>
+          <input
+            class="inp"
+            id="firstName"
+            type="text"
+            placeholder="Enter your first name"
+            required
+          />
+          <label class="sig" for="lastName">Last Name</label>
+          <input
+            class="inp"
+            id="lastName"
+            type="text"
+            placeholder="Enter your last name"
+            required
+          />
+          <label class="sig" for="email">Email</label>
+          <input
+            class="inp"
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+            pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+          />
+          <label class="sig" for="password">Password</label>
+          <div class="password-container">
+            <input
+              class="inp"
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              required
+            />
+            <span class="toggle-password" onclick="togglePasswordVisibility()">
+              <i class="fa-solid fa-eye"></i>
+            </span>
+          </div>
+          <label class="sig" for="confirmPassword">Confirm Password</label>
+          <div class="password-container">
+            <input
+              class="inp"
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirm your password"
+              required
+            />
+            <span class="toggle-password" onclick="togglePasswordVisibility()">
+              <i class="fa-solid fa-eye"></i>
+            </span>
+          </div>
+          <button type="submit" class="sub">register</button>
+          <p class="login-link">
+            Already have an account? <a href="login.html">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sign.js"></script>
+    <script>
+      function togglePasswordVisibility() {
+        const passwordInput = document.getElementById("password");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+        const toggleIcons = document.querySelectorAll(".toggle-password i");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          confirmPasswordInput.type = "text";
+          toggleIcons.forEach((icon) => {
+            icon.classList.remove("fa-eye");
+            icon.classList.add("fa-eye-slash");
+          });
+        } else {
+          passwordInput.type = "password";
+          confirmPasswordInput.type = "password";
+          toggleIcons.forEach((icon) => {
+            icon.classList.remove("fa-eye-slash");
+            icon.classList.add("fa-eye");
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+header {
+  display: flex;
+  width: 100%;
+}
+nav {
+  padding: 10px 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-size: 40px;
+  text-decoration: none;
+  color: black;
+  margin-left: 30px;
+}
+.logo .fa-solid {
+  font-size: 50px;
+  color: rgb(128, 133, 133);
+}
+
+nav ul {
+  text-decoration: none;
+  display: flex;
+}
+nav ul li {
+  margin-inline: 15px;
+  display: inline-block;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+nav ul li a:hover {
+  color: white;
+  background-color: black;
+}
+nav .fa-solid {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.cat {
+  position: relative;
+}
+.cat::before {
+  content: "4";
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  bottom: -13px;
+  right: -3px;
+}
+.container {
+  background: url(/e-commerce/back.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+
+  height: 100vh;
+}
+main {
+  width: 100%;
+  padding: 110px 0 0 50px;
+}
+.contain h2 {
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 110%;
+}
+.contain h3 {
+  padding-left: 30px;
+  font-size: 60px;
+}
+.contain h3 span {
+  color: red;
+}
+.contain p {
+  font-size: 40px;
+  padding-left: 40px;
+}
+.btn {
+  margin: 50px;
+}
+.btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  width: 250px;
+  height: 60px;
+  color: white;
+  background-color: blue;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 5px 10px;
+  transition: 0.5s ease;
+}
+.btn a:hover {
+  color: aqua;
+  background-color: black;
+}
+.products {
+  background-color: black;
+  width: 100%;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.title h2 {
+  color: white;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+.title .fa-solid {
+  padding-top: 20px;
+  color: white;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+.card {
+  width: 22em;
+  overflow: hidden;
+  background-color: white;
+  padding: 20px;
+  margin: 0 10px 15px 0;
+  border-radius: 20px;
+}
+.card img {
+  width: 100%;
+}
+.card figcaption {
+  color: black;
+}
+.info h3 {
+  padding-top: 5px;
+  font-size: 20px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+.info p {
+  color: grey;
+}
+.p-info {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.p-info .price {
+  color: rgb(174, 16, 16);
+  font-size: 20px;
+  font-weight: 600;
+}
+.p-info a {
+  padding: 5px 10px;
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+.p-info a .fa-solid {
+  font-size: 13px;
+}
+footer {
+  background-color: rgb(222, 227, 230);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.footer-title span:hover a {
+  text-decoration: underline;
+  color: rgb(235, 73, 73);
+}
+.footer-title span a {
+  color: brown;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+.footer .social-icons a {
+  font-size: 1.3em;
+  padding: 0 12px 0 0;
+  color: black;
+}
+.footer .social-icons a :hover {
+  color: aqua;
+}
+@media (max-width: 720px) {
+  header {
+    height: 46px;
+  }
+  nav {
+    padding: 15px 10px;
+  }
+  nav .logo {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 700;
+  }
+  nav .fa-solid {
+    font-size: 13px;
+    margin-right: 0px;
+    margin-inline: 0px;
+    padding-right: 1px;
+  }
+  .logo .fa-solid {
+    display: inline-block;
+    font-size: 30px;
+  }
+  nav ul li {
+    margin-inline: 0px;
+    margin-left: 0;
+    text-align: center;
+  }
+  nav ul li a {
+    display: inline-block;
+
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  .cat::before {
+    content: "4";
+    background-color: red;
+    color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: -10px;
+    right: 3px;
+  }
+  main {
+    width: 100%;
+    padding: 150px 0 0 20px;
+  }
+
+  .contain h2 {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .contain h3 {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .contain h3 span {
+    color: red;
+    font-weight: 500;
+  }
+  .contain p {
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  .btn {
+    margin: 40px 10px;
+  }
+
+  .title h2 {
+    color: white;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .title .fa-solid {
+    padding-top: 20px;
+    color: white;
+    font-size: 24px;
+    margin-right: 5px;
+  }
+
+  .card {
+    width: 20rem;
+
+    border-radius: 20px;
+    padding-bottom: 10px;
+  }
+  .card img {
+    width: 18rem;
+  }
+
+  .p-info {
+    margin-top: 10px;
+  }
+  footer {
+    padding: 0.7em;
+  }
+
+  .footer .social-icons a {
+    font-size: 1em;
+    padding: 0;
+    color: black;
+  }
+  .footer .social-icons {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    background: url(back1.jpg) no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-height: 450px) {
+  .container {
+    height: 100vh;
+  }
+  main {
+    padding: 30px 0 0 20px;
+  }
+  .contain h2 {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .contain h3 {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .contain p {
+    font-size: 25px;
+    padding-left: 40px;
+  }
+
+  .btn {
+    margin: 15px 10px;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 650px) {
+  .card {
+    width: 15em;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+  }
+  .card img {
+    width: 13em;
+  }
+
+  .p-info {
+    margin-top: 10px;
+  }
+  .info h3 {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1040px) and (max-width: 1140px) {
+  .card {
+    width: 20em;
+  }
+  .card img {
+    width: 18em;
+  }
+}
+@media (min-width: 940px) and (max-width: 1040px) {
+  .card {
+    width: 18em;
+  }
+  .card img {
+    width: 16em;
+  }
+}
+@media (min-width: 840px) and (max-width: 940px) {
+  .card {
+    width: 22em;
+  }
+  .card img {
+    width: 20em;
+  }
+}
+@media (min-width: 750px) and (max-width: 840px) {
+  .info h3 {
+    font-size: 17px;
+  }
+  .card {
+    width: 18em;
+  }
+  .card img {
+    width: 16em;
+  }
+}
+@media (min-width: 640px) and (max-width: 750px) {
+  .card {
+    width: 18em;
+  }
+  .card img {
+    width: 16em;
+  }
+}
+@media (max-width: 345px) {
+  .card {
+    width: 18em;
+  }
+  .card img {
+    width: 12em;
+  }
+}
+@media (max-width: 375px) {
+  nav {
+    padding: 15px 5px;
+  }
+  nav .logo {
+    font-size: 15px;
+  }
+  nav .fa-solid {
+    font-size: 10px;
+  }
+  .logo .fa-solid {
+    font-size: 25px;
+  }
+
+  nav ul li a {
+    font-size: 12px;
+  }
+  .cat::before {
+    content: "4";
+    background-color: red;
+    color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    top: -10px;
+    right: 3px;
+  }
+  main {
+    width: 100%;
+    padding: 150px 0 0 20px;
+  }
+
+  .contain h2 {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .contain h3 {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .contain h3 span {
+    color: red;
+    font-weight: 500;
+  }
+  .contain p {
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  .btn {
+    margin: 40px 10px;
+  }
+}
