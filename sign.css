@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  display: flex;
+  height: 60px;
+  background-color: black;
+  width: 100%;
+}
+
+nav {
+  padding: 20px 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+}
+
+.logo .fa-solid {
+  font-size: 50px;
+  color: rgb(128, 133, 133);
+}
+
+nav .fa-solid {
+  margin-right: 5px;
+}
+
+nav ul {
+  text-decoration: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-inline: 15px;
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+nav ul li a:hover {
+  color: rgb(50, 165, 201);
+  background-color: rgb(255, 255, 255);
+}
+
+.cat {
+  background-color: rgb(5, 96, 96);
+}
+
+.cat:hover {
+  color: white;
+  background-color: rgb(5, 96, 96);
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  background-color: #eee;
+}
+
+.container {
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 30px;
+}
+
+form {
+  padding: 10px 20px;
+}
+
+h2 {
+  color: white;
+  margin-top: 20px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+form .sig {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+form .inp {
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.fa-regular {
+  color: white;
+  margin-right: 10px;
+}
+
+form a {
+  text-decoration: none;
+}
+
+.sub {
+  display: block;
+  width: 80%;
+  height: 50px;
+  margin: 50px auto 0 auto;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.sub:hover {
+  background-color: blue;
+  color: white;
+}
+
+.checb,
+.check {
+  margin-top: 20px;
+}
+
+.check {
+  color: white;
+  font-size: 20px;
+}
+
+.checb {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.login-link {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-link a {
+  color: rgb(50, 165, 201);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
+.toggle-password:hover {
+  color: #333;
+}
+
+@media (max-width: 480px) {
+  .sub {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    margin: 10px;
+  }
+
+  .container h2 {
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  form .sig {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+  }
+}
+
+@media (max-width: 720px) {
+  header {
+    height: 46px;
+  }
+
+  nav {
+    padding: 15px 10px;
+  }
+
+  nav .logo {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 700;
+  }
+
+  nav .fa-solid {
+    font-size: 13px;
+    margin-right: 0px;
+    margin-inline: 0px;
+    padding-right: 1px;
+  }
+
+  .logo .fa-solid {
+    display: inline-block;
+    font-size: 30px;
+  }
+
+  nav ul li {
+    margin-inline: 0px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 5px;
+    border-radius: 20px;
+  }
+
+  .sub {
+    display: block;
+    width: 80%;
+    height: 50px;
+    margin: 15px auto 0 auto;
+    border-radius: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+
+  .contain {
+    height: calc(100vh - 46px);
+  }
+}
+
+@media (min-height: 50px) and (max-height: 450px) {
+  header {
+    height: 40px;
+  }
+
+  nav {
+    padding: 5px 10px;
+  }
+
+  nav .logo {
+    font-size: 15px;
+    margin-left: 10px;
+    font-weight: 700;
+  }
+
+  nav .fa-solid {
+    font-size: 13px;
+    margin-right: 0px;
+    margin-inline: 0px;
+    padding-right: 1px;
+  }
+
+  .logo .fa-solid {
+    display: inline-block;
+    font-size: 30px;
+  }
+
+  nav ul li {
+    margin-inline: 0px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+
+  h2 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .contain {
+    height: calc(100vh - 40px);
+  }
+
+  .container {
+    height: 250px;
+    width: 600px;
+  }
+
+  form .sig {
+    font-size: 15px;
+  }
+
+  form .inp {
+    margin: 5px 0;
+    width: 95%;
+    height: 30px;
+    padding-left: 10px;
+  }
+
+  .sub {
+    margin: 0px auto 0 auto;
+  }
+
+  .checb,
+  .check {
+    margin-top: 10px;
+  }
+
+  .check {
+    color: white;
+    font-size: 15px;
+  }
+
+  .checb {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+}
