@@ -57,11 +57,12 @@ nav .fa-solid {
   position: relative;
 }
 .cat::before {
-  content: "4";
+  content: "1";
   background-color: red;
   color: white;
   width: 20px;
   height: 20px;
+  font-size:17px
   border-radius: 50%;
   position: absolute;
   text-align: center;
@@ -95,7 +96,7 @@ main {
 }
 .contain p {
   font-size: 40px;
-  padding-left: 40px;
+  padding-left: 10px;
 }
 .btn {
   margin: 50px;
@@ -259,16 +260,10 @@ footer {
     border-radius: 20px;
   }
   .cat::before {
-    content: "4";
-    background-color: red;
-    color: white;
+ 
     width: 15px;
     height: 15px;
-    border-radius: 50%;
-    position: absolute;
-    text-align: center;
-    top: -10px;
-    right: 3px;
+    
   }
   main {
     width: 100%;
@@ -459,16 +454,12 @@ footer {
     font-size: 12px;
   }
   .cat::before {
-    content: "4";
-    background-color: red;
-    color: white;
+   
     width: 15px;
     height: 15px;
     border-radius: 50%;
     position: absolute;
-    text-align: center;
-    top: -10px;
-    right: 3px;
+  
   }
   main {
     width: 100%;
@@ -498,3 +489,4 @@ footer {
     margin: 40px 10px;
   }
 }
+
