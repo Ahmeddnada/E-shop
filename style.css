@@ -96,7 +96,7 @@ main {
 }
 .contain p {
   font-size: 40px;
-  padding-left: 10px;
+  padding-left: 40px;
 }
 .btn {
   margin: 50px;
@@ -457,8 +457,7 @@ footer {
    
     width: 15px;
     height: 15px;
-    border-radius: 50%;
-    position: absolute;
+
   
   }
   main {
@@ -483,11 +482,12 @@ footer {
   }
   .contain p {
     font-size: 25px;
-    padding-left: 20px;
+    padding-left: 10px;
   }
   .btn {
     margin: 40px 10px;
   }
 }
+
 
 
