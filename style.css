@@ -62,12 +62,12 @@ nav .fa-solid {
   color: white;
   width: 20px;
   height: 20px;
-  font-size:17px
+  font-size:17px;
   border-radius: 50%;
   position: absolute;
   text-align: center;
   bottom: -13px;
-  right: -3px;
+  right: 3px;
 }
 .container {
   background: url(back.jpg) no-repeat;
@@ -489,4 +489,5 @@ footer {
     margin: 40px 10px;
   }
 }
+
 
